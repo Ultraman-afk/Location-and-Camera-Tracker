@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website ujicoba</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pelacak Lokasi dan Kamera</h1>
+
+        <!-- Disclaimer -->
+        <p class="disclaimer">
+            📢 Penting: Website ini hanya untuk keperluan uji coba dan 100% aman. Privasi Anda sangat kami hargai, dan pemilik website ini tidak memiliki akses atau merekam gambar atau video dari kamera Anda. Semua akses kamera hanya terjadi di perangkat Anda dan sepenuhnya bersifat lokal. Tidak ada data yang disimpan atau dikirim ke server eksternal. Anda aman sepenuhnya.
+
+            Website ini juga projek gabut, hehehe 😄🙏🏼</p>
+
+        <p>Click the button to get your current location:</p>
+
+        <button onclick="getLocation()">📍 Dapatkan Lokasi</button>
+        <button onclick="openCamera()">📸 Buka Kamera</button>
+        <button onclick="addCustomMarker()">🗺️ Tambah Penanda di Peta</button>
+        <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Switch to Dark Mode</button>
+
+       
+        <p id="weather" style="font-weight: bold;"></p>
+
+        <div id="map-container" style="display: none;">
+            <div id="map"></div>
+            <p id="status"></p>
+            <p id="address" style="font-weight: bold;"></p>
+        </div>
+
+        <h3>Riwayat Lokasi</h3>
+        <ul id="location-history"></ul>
+
+        <div id="loadingSpinner" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i> Loading...
+        </div>
+
+        <div>
+            <video id="camera" autoplay playsinline></video>
+            <canvas id="canvas" style="display:none;"></canvas>
+            <br>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 hengkertyz
+            <br><br>
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com/pmpky_" target="_blank" class="icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/GavvYummy" target="_blank" class="icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.youtube.com/@capaolcuntul" target="_blank" class="icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://T.me/cihuytampling" target="_blank" class="icon">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://github.com/ultraman-afk" target="_blank" class="icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>            
+    </div>
+
+    <!-- Link JavaScript Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
